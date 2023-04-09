@@ -1,0 +1,429 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Lora:ital@1&family=Roboto&family=Source+Sans+Pro&family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Lora:ital@1&family=Roboto:wght@400;900&family=Source+Sans+Pro&family=Ubuntu&display=swap');
+
+* {
+    box-sizing: border-box;
+    /* border: 1px solid red; */
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+
+h2,
+p {
+    padding: 0;
+    margin: 0;
+}
+
+
+
+.conteiner-left {
+    /* position: absolute; */
+    /* Положение элемента на странице */
+    left: 0;
+    /* Зафиксируем элемент слева */
+    animation: slide-left 1s ease-out;
+    /* Назначение анимации и её параметров */
+    box-shadow: 0 0 10px 1px black;
+}
+
+@keyframes slide-left {
+    from {
+        transform: translateX(-50%);
+        /* Начальное положение: перемещение элемента за левую границу экрана */
+    }
+
+    to {
+        transform: translateX(0);
+
+    }
+
+}
+
+.conteiner-right {
+    /* position: absolute; */
+    /* Положение элемента на странице */
+    left: 0;
+    /* Зафиксируем элемент слева */
+    animation: slide-right 1s ease-out;
+    /* Назначение анимации и её параметров */
+    box-shadow: 0 0 10px 1px black;
+}
+
+@keyframes slide-right {
+    from {
+        transform: translateX(+50%);
+        /* Начальное положение: перемещение элемента за правую границу экрана */
+    }
+
+    to {
+        transform: translateX(0);
+        /* Конечное положение: элемент на своём месте */
+    }
+}
+
+.conteiner {
+    width: 100vw;
+    height: 100vh;
+    max-width: 1028px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    /* box-shadow: 0 0 10px 5px black; */
+}
+
+.conteiner-left {
+    width: 40%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 255, 0.8), rgba(0, 0, 255, 1)), url(./img/trail3.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    background-position: top;
+    display: flex;
+
+
+
+}
+
+.image-filter {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
+    color: grey;
+
+
+}
+
+.text {
+    width: 100%;
+    padding-top: 10px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    font-size: 23px;
+
+}
+
+.conteiner-right {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.conteiner-right-header {
+
+    width: 80%;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-top: 100px;
+
+
+}
+
+.conteiner-right-taim {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+
+}
+
+.days-block {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-family: Roboto;
+    padding-right: 30px;
+}
+
+.days {
+    font-size: 70px;
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
+
+}
+
+.days-text {
+    font-size: 12px;
+    font-weight: bold;
+    opacity: 0.6;
+
+}
+
+
+.conteiner-right-text-h2 {
+    font-family: Roboto;
+    font-weight: bold;
+
+}
+
+.conteiner-right-text-p {
+    width: 46%;
+    font-size: 10px;
+    color: grey;
+    font-family: Roboto;
+    line-height: 13px;
+    padding-top: 10px;
+}
+
+.conteiner-right-enter-mail {
+    width: 46%;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+
+}
+
+.enter-email {
+    width: 70%;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    display: flex;
+    flex-direction: row;
+    padding-left: 15px;
+    align-items: center;
+    height: 50px;
+    background-color: rgb(183, 183, 183);
+    color: grey;
+    font-family: Roboto;
+    font-weight: bold;
+    font-size: 12px;
+    border: none;
+    outline: none;
+}
+
+.enter-send {
+    width: 30%;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    background-color: rgb(73, 171, 255);
+    color: white;
+    font-family: Roboto;
+    font-weight: bold;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+
+.conteiner-right-footer {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 50px;
+    align-items: center;
+}
+
+.icons {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.conteiner-right-footer-icons {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.conteiner-right-footer-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: end;
+    width: 50%;
+    font-size: 12px;
+    padding-right: 10px;
+    color: rgb(183, 183, 183);
+}
+
+a {
+    text-decoration: none;
+}
+
+
+@media screen and (max-width: 758px) {
+
+    .conteiner {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .conteiner-left {
+        /* position: absolute; */
+        /* Положение элемента на странице */
+        left: 0;
+        /* Зафиксируем элемент слева */
+        animation: slide-left 1s ease-out;
+        /* Назначение анимации и её параметров */
+        box-shadow: 0 0 10px 1px black;
+        width: 100%;
+        height: 30%;
+    }
+
+    @keyframes slide-left {
+        from {
+            transform: translateY(-50%);
+            /* Начальное положение: перемещение элемента за левую границу экрана */
+        }
+
+        to {
+            transform: translateY(0);
+
+        }
+    }
+
+    .conteiner-right {
+        /* position: absolute; */
+        /* Положение элемента на странице */
+        left: 0;
+        /* Зафиксируем элемент слева */
+        animation: slide-right 1s ease-out;
+        /* Назначение анимации и её параметров */
+        box-shadow: 0 0 10px 1px black;
+        width: 100%;
+        height: 70%;
+        justify-content: space-around;
+    }
+
+    @keyframes slide-right {
+        from {
+            transform: translateY(+50%);
+            /* Начальное положение: перемещение элемента за правую границу экрана */
+        }
+
+        to {
+            transform: translateY(0);
+            /* Конечное положение: элемент на своём месте */
+        }
+    }
+
+    .conteiner-right-enter-mail {
+        width: 100%;
+        padding-top: 30px;
+    }
+
+    .enter-email {
+        width: 70%;
+    }
+
+    .enter-send {
+        width: 30%;
+
+    }
+
+
+    .conteiner-right-footer {
+        width: 100%;
+        height: 10%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding-left: 10px;
+        align-items: center;
+    }
+
+    .conteiner-right-enter-mail {
+        height: 50px;
+        width: 100%;
+    }
+
+    .conteiner-right-footer-icons {
+        width: 100%;
+    }
+
+    .conteiner-right-footer-text {
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .conteiner-right-text p {
+        width: 100%;
+    }
+
+    p {
+        width: 100%;
+        padding-top: 20px;
+        text-align: center;
+    }
+
+    .enter-send p {
+        padding-top: 0;
+    }
+
+    .text {
+
+        padding-top: 30px;
+
+
+    }
+
+    .image-filter {
+        height: 100%;
+
+    }
+}
+
+
+@media screen and (max-width: 410px) {
+
+    .conteiner {
+        width: 100%;
+        height: 1200px;
+    }
+
+    .image-filter {
+        height: 100%;
+        width: 100%;
+    }
+
+    .days-block {
+        padding-right: 15px;
+    }
+
+    .days {
+        font-size: 40px;
+        font-weight: bold;
+        padding: 0;
+        margin: 0;
+
+    }
+}
